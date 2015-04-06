@@ -1,0 +1,30 @@
+%header
+  .logo-holder 
+    =link_to image_tag("logo.png"), "#", class: "logo"
+  %nav{:class => "nav navbar-default navbar-fixed", "role" => "navigation"}
+    %div{:class => "navbar-header"}
+      %button{:type=>"button", :class=>"navbar-toggle", "data-target"=>"navMenu", "data-toggle"=>"collapse"}
+        %span{:class=>"icon-bar"}
+        %span{:class=>"icon-bar"}
+        %span{:class=>"icon-bar"}
+    %div{:id=>"navMenu", :class=>"collapse navbar-collapse navbar-right"}
+      %ul{:class=>"nav navbar-nav"}
+        %li
+          =link_to "Home", "#"
+        %li 
+          =link_to "About PMG", "#"
+        %li
+          =link_to "Why a PMG Loan", "#"
+        -#[-if logged_in
+          -#%li
+            -#="Welcome #{@user.name}"
+          -#%li{class:"dropdown"}
+            -#=link_to "Loan Center", "#", [class="dropdown-toggle", "data-toggle"=>"dropdown"
+              -#%b{class:"caret"}
+              -#%ul{class:"dropdown-menu"}
+                -#%li
+                  -#=link_to
+        -#else
+        %li
+          =link_to "Log in", "#"
+.clearfix

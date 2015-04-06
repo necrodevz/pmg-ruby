@@ -3,13 +3,15 @@ Rails.application.routes.draw do
 
   get 'loans/new'
 
-  get 'static_pages/home'
+  root 'static_pages#home'
 
-  get 'static_pages/about'
+  get 'about' => 'static_pages#about'
 
-  get 'static_pages/comtact'
+  get 'contact' => 'static_pages#contact'
 
-  get 'static_pages/BecomeLender'
+  get 'become_lender' => 'static_pages#BecomeLender'
+  
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
